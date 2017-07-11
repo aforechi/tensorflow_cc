@@ -7,8 +7,8 @@ project(
 # Static library with no GPU support is built by default.
 # Use the following option to build a shared library with GPU support.
 # If enabled, bazel has to be installed.
-option(TENSORFLOW_SHARED "Build shared library (required for GPU support)." OFF)
-option(TENSORFLOW_STATIC "Build static library." ON)
+option(TENSORFLOW_SHARED "Build shared library (required for GPU support)." ON)
+option(TENSORFLOW_STATIC "Build static library." OFF)
 
 # -------------
 # CMake Options
@@ -47,7 +47,7 @@ if(TENSORFLOW_SHARED)
   add_library(tensorflow_cc_shared INTERFACE)
   target_compile_options(
     tensorflow_cc_shared INTERFACE
-    "-std=c++1z"
+    "-std=c++11"
   )
   add_dependencies(
     tensorflow_cc_shared
@@ -79,7 +79,7 @@ if(TENSORFLOW_STATIC)
   add_library(tensorflow_cc_static INTERFACE)
   target_compile_options(
     tensorflow_cc_static INTERFACE
-    "-std=c++1z"
+    "-std=c++11"
   )
   add_dependencies(
     tensorflow_cc_static

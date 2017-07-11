@@ -9,10 +9,10 @@ This repository contains two CMake projects. The [tensorflow_cc](tensorflow_cc) 
 
 #### 1) Install requirements
 
-##### Ubuntu 16.04+:
+##### Ubuntu 14.04+:
 ```
 sudo apt-get install build-essential curl git cmake unzip autoconf autogen libtool mlocate \
-                     python python3-numpy python3-dev python3-pip python3-wheel
+                     python python3-numpy python3-dev python3-pip python3-wheel realpath
 sudo updatedb
 ```
 

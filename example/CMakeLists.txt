@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
+
+project(example CXX)
+
 add_executable(example example.cpp)
 
 # try the shared tensorflow library first
